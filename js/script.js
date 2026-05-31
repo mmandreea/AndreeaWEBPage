@@ -73,7 +73,7 @@ function renderProjects(projectsToRender) {
     projectsGrid.innerHTML = '';
 
     if (projectsToRender.length === 0) {
-        projectsGrid.innerHTML = '<p style="color: #5e723d; font-size: 1.1rem;">Nu am găsit niciun proiect conform căutării tale.</p>';
+        projectsGrid.innerHTML = '<p style="color: #5e723d; font-size: 1.1rem;">No projects found matching your search.</p>';
         return;
     }
 
