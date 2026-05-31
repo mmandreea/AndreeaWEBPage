@@ -168,7 +168,21 @@
 
         <section id="projects" class="other-section">
             <h2 class="section-title">Projects</h2>
-            <p>This is where we will add the JavaScript logic to fetch your GitHub repositories dynamically.</p>
+
+            <!-- Zona de Căutare (Search Bar) -->
+            <div class="projects-controls">
+                <input type="text" id="search-input" placeholder="Search projects by name or language...">
+            </div>
+
+            <!-- Starea de Loading (Spinner) -->
+            <div id="loading-spinner" class="spinner"></div>
+            
+            <!-- Mesajul de Eroare (Ascuns implicit) -->
+            <div id="error-message" class="error-msg" style="display: none;"></div>
+            
+            <!-- Grila unde vor apărea cardurile rotative -->
+            <div id="projects-grid" class="projects-grid"></div>
+            
         </section>
 
     </div>
