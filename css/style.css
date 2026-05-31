@@ -297,13 +297,6 @@ body {
     transform: translateY(-3px); /* Mic efect de ridicare la hover */
 }
 
-/* Responsivitate pentru ecranele mici */
-@media (max-width: 992px) {
-    .about-grid {
-        grid-template-columns: 1fr; /* Trece pe o singură coloană pe telefon */
-        gap: 40px;
-    }
-}
 
 /* =======================================
    SECȚIUNEA 3: PROIECTE & FLIP CARDS
