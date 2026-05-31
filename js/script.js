@@ -103,7 +103,7 @@ function renderProjects(projectsToRender) {
                     <p class="project-desc">${description}</p>
                     
                     <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="btn-source" onclick="event.stopPropagation()">
-                        Cod Sursă
+                        Source Code
                     </a>
                 </div>
                 
