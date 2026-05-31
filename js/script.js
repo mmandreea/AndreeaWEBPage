@@ -62,7 +62,7 @@ async function fetchProjects() {
         
         // 4. Tratarea Erorilor (UI prietenos)
         loadingSpinner.style.display = 'none';
-        errorMessage.textContent = "Ups! Nu am putut încărca proiectele momentan. Te rugăm să revii mai târziu.";
+        errorMessage.textContent = "Oops! We couldn't load the projects at the moment. Please try again later.";
         errorMessage.style.display = 'block';
     }
 }
@@ -79,8 +79,8 @@ function renderProjects(projectsToRender) {
 
     projectsToRender.forEach(repo => {
         // Setăm valorile default dacă lipsesc
-        const description = repo.description ? repo.description : "Fără descriere disponibilă.";
-        const language = repo.language ? repo.language : "Nespecificat";
+        const description = repo.description ? repo.description : "No description available";
+        const language = repo.language ? repo.language : "Unspecified";
 
         // Creăm containerul principal al cardului
         const card = document.createElement('div');
