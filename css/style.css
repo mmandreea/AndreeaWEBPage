@@ -467,34 +467,81 @@ body {
    5. RESPONSIVITATE (Mobile & Tablete)
    ======================================= */
 @media (max-width: 992px) {
+    /* 1. Transformăm Sidebar-ul într-o bară superioară ceva mai lată */
     .sidebar {
         width: 100%;
-        height: auto;
-        position: relative; /* Pe mobil îl deblocăm pentru că ar ocupa tot ecranul */
+        height: 90px; /* Am mărit înălțimea barei */
+        position: fixed; 
+        top: 0;
+        left: 0;
+        flex-direction: row;
+        align-items: flex-start; /* Mutăm alinierea sus */
+        padding: 35px 30px; /* Împingem butonul 35px în jos și 30px la dreapta */
+        z-index: 999; 
     }
     
+    /* 2. Ascundem elementele nedorite pe mobil */
+    .hero-image, .contact-info {
+        display: none;
+    }
+
+    /* 3. Ajustăm conținutul principal ca să nu intre sub bara superioară */
     .main-content {
-        margin-left: 0; /* Anulăm distanța pe mobil */
+        margin-left: 0; 
+        padding-top: 90px; /* Lăsăm loc fix cât e bara de sus */
     }
 
     .hero-section {
-        flex-direction: column;
-        height: auto;
+        min-height: calc(100vh - 90px);
+        padding: 40px 0;
     }
-    
-    .hero-image {
-        width: 100%;
-        height: 50vh;
+
+    .content {
+        padding: 0 5%;
     }
-    
-    .sidebar-nav {
-        order: 2;
-        width: 100%;
+
+    .huge-name {
+        font-size: 3.5rem;
     }
-    
-    .contact-info {
-        flex-direction: row;
+
+    .social-links{
+        justify-content: center;
         flex-wrap: wrap;
-        margin-top: 20px;
+    }
+
+    /* 4. Meniul Full-Screen */
+    .sidebar-nav {
+        display: none; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #5e723d; 
+        z-index: 998; /* Sub buton, peste conținut */
+        margin-top: 0;
+        padding-top: 130px; /* Lăsăm mai mult spațiu sus ca textul să nu se suprapună cu butonul */
+        padding-left: 10%;
+    }
+    
+    .sidebar-nav.show {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .sidebar-nav ul {
+        gap: 30px; 
+    }
+
+    /* 5. Asigurăm vizibilitatea butonului */
+    .menu-icon {
+        z-index: 1000; 
+        position: relative;
+    }
+
+    /* Ajustare axă timeline pentru mobil */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 }

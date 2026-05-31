@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         menu.classList.remove('show');
                     });
                 });
+
+                
             }
         });
 
