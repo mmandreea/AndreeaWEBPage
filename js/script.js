@@ -69,7 +69,7 @@ async function fetchProjects() {
     }
 }
 
-// 2. Funcția pentru a genera și afișa cardurile HTML
+// 2. Funcția pentru a genera și afișa cardurile HTML (Varianta Statică)
 function renderProjects(projectsToRender) {
     // Curățăm grila înainte de a adăuga elemente noi
     projectsGrid.innerHTML = '';
@@ -84,31 +84,27 @@ function renderProjects(projectsToRender) {
         const description = repo.description ? repo.description : "No description available";
         const language = repo.language ? repo.language : "Unspecified";
 
-        // Creăm containerul principal al cardului
+        // Creăm containerul principal al cardului static
         const card = document.createElement('div');
-        card.className = 'flip-card';
+        card.className = 'project-card';
 
-        // Structura internă actualizată (Butonul mutat pe spate)
+        // Structura liniară: toate informațiile sunt pe o singură față
         card.innerHTML = `
-            <div class="flip-card-inner">
-                
-                <div class="flip-card-front">
-                    <h3 class="project-title">${repo.name}</h3>
-                    <div class="project-stats">
-                        <span title="Stars">⭐ ${repo.stargazers_count}</span>
-                        <span title="Forks">🍴 ${repo.forks_count}</span>
-                    </div>
+            <div class="project-card-header">
+                <h3 class="project-title">${repo.name}</h3>
+                <span class="project-lang">${language}</span>
+            </div>
+            
+            <p class="project-desc">${description}</p>
+            
+            <div class="project-card-footer">
+                <div class="project-stats">
+                    <span title="Stars">⭐ ${repo.stargazers_count}</span>
+                    <span title="Forks">🍴 ${repo.forks_count}</span>
                 </div>
-                
-                <div class="flip-card-back">
-                    <span class="project-lang">${language}</span>
-                    <p class="project-desc">${description}</p>
-                    
-                    <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="btn-source" onclick="event.stopPropagation()">
-                        Source Code
-                    </a>
-                </div>
-                
+                <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="btn-source">
+                    Source Code
+                </a>
             </div>
         `;
 
