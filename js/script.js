@@ -116,7 +116,7 @@ function renderProjects(projectsToRender) {
 searchInput.addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();
     
-    // Filtrăm din array-ul global `allProjects`
+    // Filtram din array-ul global `allProjects`
     const filteredProjects = allProjects.filter(repo => {
         const repoName = repo.name.toLowerCase();
         const repoLang = (repo.language || "").toLowerCase();
@@ -124,10 +124,10 @@ searchInput.addEventListener('input', (e) => {
         return repoName.includes(searchTerm) || repoLang.includes(searchTerm);
     });
 
-    // Randăm din nou doar proiectele care se potrivesc
+    // Randam din nou doar proiectele care se potrivesc
     renderProjects(filteredProjects);
 });
 
-// Inițializarea apelului la încărcarea paginii
+// Inițializarea apelului la incărcarea paginii
 document.addEventListener('DOMContentLoaded', fetchProjects);
     

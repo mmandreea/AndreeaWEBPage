@@ -1,5 +1,5 @@
 /* =======================================
-   1. RESETĂRI GLOBALE & SCROLL LENT
+   1. setari globale 
    ======================================= */
 * {
     margin: 0;
@@ -15,11 +15,10 @@ html {
 body {
     background-color: #acc09b; 
     color: #5e723d; 
-    /* Am eliminat overflow: hidden ca să permitem derularea paginii */
 }
 
 /* =======================================
-   2. COLOANA 1: SIDEBAR (Fixat pe stânga)
+   2. coloana 1 - siderbar
    ======================================= */
 .sidebar {
     width: 250px; 
@@ -56,7 +55,7 @@ body {
 }
 
 .sidebar-nav {
-    display: none; 
+    display: none; /* Ascuns implicit, va fi afișat la click pe buton */
     margin-top: 30px;
     flex-grow: 1; 
 }
@@ -105,7 +104,7 @@ body {
 }
 
 /* =======================================
-   3. ZONA DE SCROLL & SECȚIUNEA HOME
+    2. pagina Home
    ======================================= */
 .main-content {
     margin-left: 250px; /* Împinge tot conținutul la dreapta ca să nu intre sub sidebar-ul fixat */
@@ -174,9 +173,9 @@ body {
     background-position: center;
 }
 
-/* =======================================
-   4. NOILE SECȚIUNI (CV și Portofoliu)
-   ======================================= */
+/* =================================================================
+    3. setari generale pt. cele doua sectiuni (About me si Projects)
+   ================================================================= */
 .other-section {
     min-height: 100vh; /* Fiecare secțiune are cel puțin înălțimea unui ecran */
     padding: 100px 8%; /* Spațiu generos sus și pe laterale */
@@ -192,7 +191,7 @@ body {
 }
 
 /* =======================================
-   SECȚIUNEA ABOUT ME (Grid & Timeline)
+    3.1 About me
    ======================================= */
 
 .about-grid {
@@ -298,7 +297,7 @@ body {
 }
 
 /* =======================================
-   SECȚIUNEA 3: PROIECTE (CARDURI STATICE)
+    3.2 Projects
    ======================================= */
 
 .projects-controls {
@@ -450,7 +449,7 @@ body {
 
 
 /* =======================================
-   5. RESPONSIVITATE (Mobile & Tablete)
+    4. responsivitate pentru ecrane mici
    ======================================= */
 @media (max-width: 992px) {
     /* 1. Transformăm Sidebar-ul într-o bară superioară ceva mai lată */
