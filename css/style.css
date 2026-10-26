@@ -23,7 +23,7 @@ body {
 .sidebar {
     width: 250px; 
     height: 100vh; /* Ocupă tot ecranul pe înălțime */
-    position: fixed; /* ÎL BLOCHEAZĂ PE ECRAN */
+    position: fixed; 
     top: 0;
     left: 0;
     background-color: #5e723d; 
@@ -44,6 +44,8 @@ body {
     align-self: flex-start;
     outline: none;
 }
+
+/* Liniile din butonul de meniu */
 .menu-icon .line {
     height: 2px;
     width: 30px;
@@ -445,7 +447,7 @@ body {
 .contact-container {
     max-width: 600px;
     margin: 50px auto;
-    background: #5e723d; /* Integrat în tema site-ului */
+    background: #5e723d; 
     color: #acc09b;
     padding: 40px;
     border-radius: 15px;
@@ -462,6 +464,7 @@ body {
 #contactForm {
     display: flex;
     flex-direction: column;
+    /* Spațiu între elementele formularului */
     gap: 20px;
 }
 
@@ -473,12 +476,14 @@ body {
 #contactForm input, 
 #contactForm textarea {
     width: 100%;
+    /* Spațiu intern pentru text */
     padding: 15px;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     background-color: #acc09b;
     color: #5e723d;
+    /* Elimină conturul implicit și adaugă o tranziție pentru efectul de focus */
     box-sizing: border-box;
     outline: none;
     transition: box-shadow 0.3s;
