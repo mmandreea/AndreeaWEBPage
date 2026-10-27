@@ -126,12 +126,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const isMessageValid = validateMessage();
 
             if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
-                console.log("Test: Datele sunt valide și formularul a fost procesat!");
+                //console.log("Test: Datele sunt valide și formularul a fost procesat!");
+                
                 
                 form.reset();
                 [nameInput, emailInput, subjectInput, messageInput].forEach(clearError);
 
-                alert("Test: Message sent successfully! Redirecting...");
+                //alert("Test: Message sent successfully! Redirecting...");
                 window.location.href = 'index.html#home'; 
             }
         });
